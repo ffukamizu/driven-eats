@@ -43,6 +43,8 @@
 }
 
 .image-container img {
+  height: 87px;
+  width: 144px;
   border-radius: 4px;
   border-style: solid;
   object-fit: cover;
