@@ -21,7 +21,7 @@
   color: #ffffff;
 }
 
-.menu-description {
+.menu-type > p {
   font-family: "Righteous";
   font-style: normal;
   font-weight: 400;
@@ -29,6 +29,48 @@
   line-height: 32px;
   letter-spacing: 0.018em;
   color: #333333;
-  margin-top: 30px;
-  margin-bottom: 17px;
+}
+
+.buttom-rectangle > p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.018em;
+  color: #ffffff;
+}
+
+.image-container img {
+  border-radius: 4px;
+  border-style: solid;
+  object-fit: cover;
+}
+
+.item-title-container p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+
+.item-subtitle-container p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  color: #a6a6a6;
+}
+
+.item-price-container p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
 }
