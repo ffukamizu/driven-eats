@@ -39,6 +39,7 @@
 }
 
 .item-container {
+  box-sizing: border-box;
   height: 216px;
   min-width: 172px;
   margin-left: 21px;
