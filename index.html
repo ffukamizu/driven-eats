@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <title>Driven Eats</title>
   </head>
   <body class="page-body">
@@ -28,7 +29,7 @@
       <div class="stack-separator"></div>
       <div class="menu-type"><p>Primeiro, seu prato</p></div>
       <section class="menu-container">
-        <div class="item-container">
+        <div id="food1" class="item-container" onclick="highlightFood(this.id)">
           <div class="image-container">
             <img src="img/frango_yin_yang.png" />
           </div>
@@ -38,7 +39,7 @@
           </div>
           <div class="item-price-container"><p>R$ 14,90</p></div>
         </div>
-        <div class="item-container">
+        <div id="food2" class="item-container" onclick="highlightFood(this.id)">
           <div class="image-container">
             <img src="img/jaeyuk bokkeum.jfif" />
           </div>
@@ -48,7 +49,7 @@
           </div>
           <div class="item-price-container"><p>R$ 40,00</p></div>
         </div>
-        <div class="item-container">
+        <div id="food3" class="item-container" onclick="highlightFood(this.id)">
           <div class="image-container"><img src="img/ramen.jfif" /></div>
           <div class="item-title-container"><p>Misso Ramen</p></div>
           <div class="item-subtitle-container">
@@ -56,7 +57,7 @@
           </div>
           <div class="item-price-container"><p>R$ 50,00</p></div>
         </div>
-        <div class="item-container">
+        <div id="food4" class="item-container" onclick="highlightFood(this.id)">
           <div class="image-container"><img src="img/sashimi.jpg" /></div>
           <div class="item-title-container"><p>Sashimi</p></div>
           <div class="item-subtitle-container">
@@ -64,7 +65,7 @@
           </div>
           <div class="item-price-container"><p>R$ 90,00</p></div>
         </div>
-        <div class="item-container">
+        <div id="food5" class="item-container" onclick="highlightFood(this.id)">
           <div class="image-container"><img src="img/toppokki.jpg" /></div>
           <div class="item-title-container"><p>Toppokki</p></div>
           <div class="item-subtitle-container">
@@ -75,19 +76,19 @@
       </section>
       <div class="menu-type"><p>Agora, sua bebida</p></div>
       <section class="menu-container">
-        <div class="item-container">
+        <div id="beverage1" class="item-container" onclick="highlightBeverage(this.id)">
           <div class="image-container"><img src="img/water.jpg" /></div>
           <div class="item-title-container"><p>Fiji Water</p></div>
           <div class="item-subtitle-container"><p>Água mineral</p></div>
           <div class="item-price-container"><p>R$ 9,00</p></div>
         </div>
-        <div class="item-container">
+        <div id="beverage2" class="item-container" onclick="highlightBeverage(this.id)">
           <div class="image-container"><img src="img/coca-cola.png" /></div>
           <div class="item-title-container"><p>Coquinha gelada</p></div>
           <div class="item-subtitle-container"><p>Lata 350m</p></div>
           <div class="item-price-container"><p>R$ 4,90</p></div>
         </div>
-        <div class="item-container">
+        <div id="beverage3" class="item-container" onclick="highlightBeverage(this.id)">
           <div class="image-container"><img src="img/melon soda.webp" /></div>
           <div class="item-title-container"><p>Melon Soda</p></div>
           <div class="item-subtitle-container">
@@ -95,7 +96,7 @@
           </div>
           <div class="item-price-container"><p>R$ 12,90</p></div>
         </div>
-        <div class="item-container">
+        <div id="beverage4" class="item-container" onclick="highlightBeverage(this.id)">
           <div class="image-container">
             <img src="img/watermelon soda.jfif" />
           </div>
@@ -105,7 +106,7 @@
           </div>
           <div class="item-price-container"><p>R$12,90</p></div>
         </div>
-        <div class="item-container">
+        <div id="beverage5" class="item-container" onclick="highlightBeverage(this.id)">
           <div class="image-container"><img src="img/soju.jpg" /></div>
           <div class="item-title-container"><p>Soju</p></div>
           <div class="item-subtitle-container"><p>Chum Churum Original</p></div>
@@ -114,13 +115,13 @@
       </section>
       <div class="menu-type"><p>Por fim, sua sobremesa</p></div>
       <section class="menu-container">
-        <div class="item-container">
+        <div id="dessert1" class="item-container" onclick="highlightDessert(this.id)">
           <div class="image-container"><img src="img/pudim.png" /></div>
           <div class="item-title-container"><p>Pudim</p></div>
           <div class="item-subtitle-container"><p>Apenas pudim</p></div>
           <div class="item-price-container"><p>R$ 7,90</p></div>
         </div>
-        <div class="item-container">
+        <div id="dessert2" class="item-container" onclick="highlightDessert(this.id)">
           <div class="image-container"><img src="img/gelato.jpeg" /></div>
           <div class="item-title-container"><p>Gelato</p></div>
           <div class="item-subtitle-container">
@@ -128,7 +129,7 @@
           </div>
           <div class="item-price-container"><p>R$ 20,00</p></div>
         </div>
-        <div class="item-container">
+        <div id="dessert3" class="item-container" onclick="highlightDessert(this.id)">
           <div class="image-container"><img src="img/ichigo mochi.jpeg" /></div>
           <div class="item-title-container"><p>Ichigo Mochi</p></div>
           <div class="item-subtitle-container">
@@ -136,13 +137,13 @@
           </div>
           <div class="item-price-container"><p>R$ 12,00</p></div>
         </div>
-        <div class="item-container">
+        <div id="dessert4" class="item-container" onclick="highlightDessert(this.id)">
           <div class="image-container"><img src="img/melon pan.jfif" /></div>
           <div class="item-title-container"><p>Melon Pan</p></div>
           <div class="item-subtitle-container"><p>Pão doce sabor melão</p></div>
           <div class="item-price-container"><p>R$15,90</p></div>
         </div>
-        <div class="item-container">
+        <div id="dessert5" class="item-container" onclick="highlightDessert(this.id)">
           <div class="image-container"><img src="img/petit gateau.jpg" /></div>
           <div class="item-title-container"><p>Petit Gateau</p></div>
           <div class="item-subtitle-container">

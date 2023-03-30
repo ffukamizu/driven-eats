@@ -51,6 +51,13 @@
   background: #ffffff;
 }
 
+/*script will apply this class to selected menu item*/
+.highlight-item {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #32b72f;
+}
+
 .image-container {
   height: 87px;
   width: 144px;
