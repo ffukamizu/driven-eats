@@ -1,19 +1,69 @@
-var isHighlighted = false;
+var isHighlightedFood = false;
+var isHighlightedBeverage = false;
+var isHighlightedDessert = false;
 
-function highlightFood(id) {
-  if (isHighlighted === false) {
+function highlightFood(idFood) {
+  if (isHighlightedFood === false) {
     //highlight a product
-    document.getElementById(id).classList.add("highlight-item");
-    currentHighlight = id;
-    isHighlighted = true;
-  } else if (isHighlighted === true && currentHighlight != id) {
-    //highlight another product while unselecting the previous one 
-    document.getElementById(currentHighlight).classList.remove("highlight-item");
-    document.getElementById(id).classList.add("highlight-item");
-    currentHighlight = id;
+    document.getElementById(idFood).classList.add("highlight-item");
+    currentHighlightFood = idFood;
+    isHighlightedFood = true;
+  } else if (isHighlightedFood === true && currentHighlightFood != idFood) {
+    //highlight another product while unselecting the previous one
+    document
+      .getElementById(currentHighlightFood)
+      .classList.remove("highlight-item");
+    document.getElementById(idFood).classList.add("highlight-item");
+    currentHighlightFood = idFood;
   } else {
     //unselect a product that is already highlighted
-    document.getElementById(id).classList.remove("highlight-item");
-    isHighlighted = false;
+    document.getElementById(idFood).classList.remove("highlight-item");
+    isHighlightedFood = false;
+  }
+}
+
+function highlightBeverage(idBeverage) {
+  if (isHighlightedBeverage === false) {
+    //highlight a product
+    document.getElementById(idBeverage).classList.add("highlight-item");
+    currentHighlightBeverage = idBeverage;
+    isHighlightedBeverage = true;
+  } else if (
+    isHighlightedBeverage === true &&
+    currentHighlightBeverage != idBeverage
+  ) {
+    //highlight another product while unselecting the previous one
+    document
+      .getElementById(currentHighlightBeverage)
+      .classList.remove("highlight-item");
+    document.getElementById(idBeverage).classList.add("highlight-item");
+    currentHighlightBeverage = idBeverage;
+  } else {
+    //unselect a product that is already highlighted
+    document.getElementById(idBeverage).classList.remove("highlight-item");
+    isHighlightedBeverage = false;
+  }
+}
+
+function highlightDessert(idDessert) {
+  if (isHighlightedDessert === false) {
+    //highlight a product
+    document.getElementById(idDessert).classList.add("highlight-item");
+    currentHighlightDessert = idDessert;
+    isHighlightedDessert = true;
+  } else if (
+    isHighlightedDessert === true &&
+    currentHighlightDessert != idDessert
+  ) {
+    //highlight another product while unselecting the previous one
+    document
+      .getElementById(currentHighlightDessert)
+      .classList.remove("highlight-item");
+    document.getElementById(idDessert).classList.add("highlight-item");
+    currentHighlightDessert = idDessert;
+  } else {
+    //unselect a product that is already highlighted
+    document.getElementById(idDessert).classList.remove("highlight-item");
+    isHighlightedDessert = false;
   }
 }
