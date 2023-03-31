@@ -76,3 +76,66 @@
   line-height: 19px;
   color: #000000;
 }
+
+.checkout-text {
+  height: 27px;
+  margin-top: 21px;
+  margin-bottom: 28px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.checkout-food, .checkout-beverage, .checkout-dessert {
+  margin-bottom: 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.018em;
+  color: #ffffff;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin-left: -75px;
+}
+
+.checkout-total {
+  margin-bottom: 24px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+#checkout-buttom-confirm {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.018em;
+  color: #50d074;
+}
+
+#checkout-buttom-cancel {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.018em;
+  color: #ffffff;
+}
