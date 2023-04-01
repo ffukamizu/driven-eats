@@ -139,3 +139,17 @@
   letter-spacing: 0.018em;
   color: #ffffff;
 }
+
+.check-display, .check-hide {
+  font-size: 18px;
+  margin-top: -20px;
+  margin-right: -135px;
+}
+
+.check-display {
+  color: #32B72F;
+}
+
+.check-hide {
+  color: #ffffff;
+}

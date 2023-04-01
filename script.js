@@ -9,6 +9,7 @@ function highlightFood(idFood) {
   //highlight a product not previously highlighted
   if (isHighlightedFood === false) {
     document.getElementById(idFood).classList.add("highlight-item");
+    document.getElementById(idFood).querySelector("div:nth-child(5)").classList.replace("check-hide", "check-display"); 
     currentHighlightFood = idFood;
     isHighlightedFood = true;
     if (isHighlightedFood === true && isHighlightedBeverage === true && isHighlightedDessert === true) {
@@ -20,7 +21,9 @@ function highlightFood(idFood) {
     //highlight another product while unselecting the previous one
   } else if (isHighlightedFood === true && currentHighlightFood != idFood) {
     document.getElementById(currentHighlightFood).classList.remove("highlight-item");
+    document.getElementById(currentHighlightFood).querySelector("div:nth-child(5)").classList.replace("check-display", "check-hide");
     document.getElementById(idFood).classList.add("highlight-item");
+    document.getElementById(idFood).querySelector("div:nth-child(5)").classList.replace("check-hide", "check-display");
     currentHighlightFood = idFood;
     if (isHighlightedFood === true && isHighlightedBeverage === true && isHighlightedDessert === true) {
       document.getElementById("buttom-text").innerHTML = "Fechar pedido";
@@ -31,6 +34,7 @@ function highlightFood(idFood) {
     //unselect a product that is already highlighted
   } else {
     document.getElementById(idFood).classList.remove("highlight-item");
+    document.getElementById(idFood).querySelector("div:nth-child(5)").classList.replace("check-display", "check-hide");
     isHighlightedFood = false;
     document.getElementById("buttom-text").innerHTML = "Selecione os 3 itens para fechar o pedido";
     document.getElementById("buttom-rectangle").classList.remove("active-buttom");
@@ -41,6 +45,7 @@ function highlightBeverage(idBeverage) {
   //highlight a product not previously highlighted
   if (isHighlightedBeverage === false) {
     document.getElementById(idBeverage).classList.add("highlight-item");
+    document.getElementById(idBeverage).querySelector("div:nth-child(5)").classList.replace("check-hide", "check-display"); 
     currentHighlightBeverage = idBeverage;
     isHighlightedBeverage = true;
     if (isHighlightedFood === true && isHighlightedBeverage === true && isHighlightedDessert === true) {
@@ -52,7 +57,9 @@ function highlightBeverage(idBeverage) {
     //highlight another product while unselecting the previous one
   } else if (isHighlightedBeverage === true && currentHighlightBeverage != idBeverage) {
     document.getElementById(currentHighlightBeverage).classList.remove("highlight-item");
+    document.getElementById(currentHighlightBeverage).querySelector("div:nth-child(5)").classList.replace("check-display", "check-hide");
     document.getElementById(idBeverage).classList.add("highlight-item");
+    document.getElementById(idBeverage).querySelector("div:nth-child(5)").classList.replace("check-hide", "check-display");
     currentHighlightBeverage = idBeverage;
     if (isHighlightedFood === true && isHighlightedBeverage === true && isHighlightedDessert === true) {
       document.getElementById("buttom-text").innerHTML = "Fechar pedido";
@@ -63,6 +70,7 @@ function highlightBeverage(idBeverage) {
     //unselect a product that is already highlighted
   } else {
     document.getElementById(idBeverage).classList.remove("highlight-item");
+    document.getElementById(idBeverage).querySelector("div:nth-child(5)").classList.replace("check-display", "check-hide");
     isHighlightedBeverage = false;
     document.getElementById("buttom-text").innerHTML = "Selecione os 3 itens para fechar o pedido";
     document.getElementById("buttom-rectangle").classList.remove("active-buttom");
@@ -73,6 +81,7 @@ function highlightDessert(idDessert) {
   //highlight a product not previously highlighted
   if (isHighlightedDessert === false) {
     document.getElementById(idDessert).classList.add("highlight-item");
+    document.getElementById(idDessert).querySelector("div:nth-child(5)").classList.replace("check-hide", "check-display"); 
     currentHighlightDessert = idDessert;
     isHighlightedDessert = true;
     if (isHighlightedFood === true && isHighlightedBeverage === true && isHighlightedDessert === true) {
@@ -84,7 +93,9 @@ function highlightDessert(idDessert) {
     //highlight another product while unselecting the previous one
   } else if (isHighlightedDessert === true && currentHighlightDessert != idDessert) {
     document.getElementById(currentHighlightDessert).classList.remove("highlight-item");
+    document.getElementById(currentHighlightDessert).querySelector("div:nth-child(5)").classList.replace("check-display", "check-hide");
     document.getElementById(idDessert).classList.add("highlight-item");
+    document.getElementById(idDessert).querySelector("div:nth-child(5)").classList.replace("check-hide", "check-display"); 
     currentHighlightDessert = idDessert;
     if (isHighlightedFood === true && isHighlightedBeverage === true && isHighlightedDessert === true) {
       document.getElementById("buttom-text").innerHTML = "Fechar pedido";
@@ -95,6 +106,7 @@ function highlightDessert(idDessert) {
     //unselect a product that is already highlighted
   } else {
     document.getElementById(idDessert).classList.remove("highlight-item");
+    document.getElementById(idDessert).querySelector("div:nth-child(5)").classList.replace("check-display", "check-hide");
     isHighlightedDessert = false;
     document.getElementById("buttom-text").innerHTML = "Selecione os 3 itens para fechar o pedido";
     document.getElementById("buttom-rectangle").classList.remove("active-buttom");
