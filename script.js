@@ -1,9 +1,9 @@
 //Will change state if an item is already highlighted
-var isHighlightedFood = false;
-var isHighlightedBeverage = false;
-var isHighlightedDessert = false;
+let isHighlightedFood = false;
+let isHighlightedBeverage = false;
+let isHighlightedDessert = false;
 //Restaurant's phone:
-const cellphone = 5511995023335;
+const phone = 5511995023335;
 
 function highlightFood(idFood) {
   //highlight a product not previously highlighted
@@ -100,9 +100,19 @@ function highlightDessert(idDessert) {
     document.getElementById("buttom-rectangle").classList.remove("active-buttom");
   }
 }
+
+let foodName = null;
+let foodPrice = null;
+let beverageName = null;
+let beveragePrice = null;
+let dessertName = null;
+let dessertPrice = null;
+let totalPrice = null;
+
 //confirm order buttom, also gets each highlighted product information
 function orderConfirm() {
   if (isHighlightedFood === true && isHighlightedBeverage === true && isHighlightedDessert === true) {
+    //unhide modal window
     document.getElementById("checkout-modal").classList.replace("modal-hide", "modal-display");
     //concatenate the id of all selected products, and gets the adress of each product's name and price
     let foodNameAdress = "#" + currentHighlightFood + " div:nth-child(2)";
@@ -112,12 +122,12 @@ function orderConfirm() {
     let dessertNameAdress = "#" + currentHighlightDessert + " div:nth-child(2)";
     let dessertPriceAdress = "#" + currentHighlightDessert + " div:nth-child(4)";
     //uses the adress to fetch a string containing the relevant information
-    let foodName = document.querySelector(foodNameAdress).innerText;
-    let foodPrice = document.querySelector(foodPriceAdress).innerText;
-    let beverageName = document.querySelector(beverageNameAdress).innerText;
-    let beveragePrice = document.querySelector(beveragePriceAdress).innerText;
-    let dessertName = document.querySelector(dessertNameAdress).innerText;
-    let dessertPrice = document.querySelector(dessertPriceAdress).innerText;
+     foodName = document.querySelector(foodNameAdress).innerText;
+     foodPrice = document.querySelector(foodPriceAdress).innerText;
+     beverageName = document.querySelector(beverageNameAdress).innerText;
+     beveragePrice = document.querySelector(beveragePriceAdress).innerText;
+     dessertName = document.querySelector(dessertNameAdress).innerText;
+     dessertPrice = document.querySelector(dessertPriceAdress).innerText;
     //display a modal with order information
     document.querySelector(".checkout-food p:nth-child(1)").innerText = foodName;
     document.querySelector(".checkout-food p:nth-child(2)").innerText = foodPrice;
@@ -125,7 +135,24 @@ function orderConfirm() {
     document.querySelector(".checkout-beverage p:nth-child(2)").innerText = beveragePrice;
     document.querySelector(".checkout-dessert p:nth-child(1)").innerText = dessertName;
     document.querySelector(".checkout-dessert p:nth-child(2)").innerText = dessertPrice;
+    //converts string to number and them sum everything
+    let stripFoodPrice = Number(foodPrice.replace(/[^0-9,.]/g, "").replace(",", "."));
+    let stripBeveragePrice = Number(beveragePrice.replace(/[^0-9,.]/g, "").replace(",", "."));
+    let stripDessertPrice = Number(dessertPrice.replace(/[^0-9,.]/g, "").replace(",", "."));
+    totalPrice = stripFoodPrice + stripBeveragePrice + stripDessertPrice;
+    totalPrice = Math.round(totalPrice * 100) / 100;
+    document.querySelector(".checkout-total p:nth-child(2)").innerText = "R$ " + totalPrice;
   } else {
-    document.getElementById("buttom-rectangle").removeEventListener("click", orderConfirm());
+    null;
   }
+}
+
+function checkout() {
+  let checkoutMensage = "Olá, gostaria de fazer o pedido:" + "\n- Prato: " + foodName + "\n- Bebida: " + beverageName + "\n- Sobremesa: " + dessertName + "\n\nTotal: R$ " + totalPrice 
+  let encoded = encodeURI('https://api.whatsapp.com/send?phone=' + phone + "&text=" + checkoutMensage)
+  window.open(encoded);
+}
+
+function cancelCheckout() {
+  document.getElementById("checkout-modal").classList.replace("modal-display", "modal-hide");
 }
