@@ -153,6 +153,8 @@ function orderConfirm() {
     let stripDessertPrice = Number(dessertPrice.replace(/[^0-9,.]/g, "").replace(",", "."));
     totalPrice = stripFoodPrice + stripBeveragePrice + stripDessertPrice;
     totalPrice = Math.round(totalPrice * 100) / 100;
+    totalPrice = totalPrice.toString();
+    totalPrice = totalPrice.replace(".", ",");
     document.querySelector(".checkout-total p:nth-child(2)").innerText = "R$ " + totalPrice;
   } else {
     null;
