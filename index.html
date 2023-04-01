@@ -153,7 +153,7 @@
         </div>
       </section>
       <aside id="checkout-modal" class="modal-hide">
-        <div class="modal-window">
+        <div class="modal-window" data-test="confirm-order-modal">
           <div class="checkout-text"><p>Confirme seu pedido</p></div>
           <div class="checkout-food">
             <p class="left" ></p>
@@ -172,10 +172,10 @@
             <p class="right"></p>
           </div>
           <div>
-            <button id="confirm-buttom" onclick="checkout()"><p id="checkout-buttom-confirm">Tudo certo, pode pedir!</p></button>
+            <button id="confirm-buttom" onclick="checkout()"  data-test="confirm-order-btn"><p id="checkout-buttom-confirm">Tudo certo, pode pedir!</p></button>
           </div>
           <div>
-            <button id="cancel-buttom" onclick="cancelCheckout()"><p id="checkout-buttom-cancel">Cancelar</p></button>
+            <button id="cancel-buttom" onclick="cancelCheckout()" data-test="cancel-order-btn"><p id="checkout-buttom-cancel">Cancelar</p></button>
           </div>
         </div>
       </aside>
